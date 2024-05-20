@@ -1,0 +1,112 @@
+*{
+    font-family: sans-serif; /* tipo de fonte, sem serifa */
+    width: 100%; /* largura */
+    margin: 0 auto; /* para centralizar */
+    box-sizing: border-box; 
+}
+
+body{
+    background-color: #18181b;
+    width: 100%; /* largura */
+    height: 100vh; /* altura, vh=viwe high, altura mostrada na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    max-width: 600px; /* altura maxima do logo */
+    margin-bottom: 24px; /* margem */
+}
+
+.container-input{
+    max-width: 480px; 
+    margin: 14px 0;
+}
+
+.container-input span{
+    color: #fff;
+    font-size: 22px;
+}
+
+.slider{ 
+    -webkit-appearance: none; /* para o chrome */
+    width: 100%; /* largura */
+    border-radius: 5px; /* borda arredondada */
+    background: #dfdfdf; /* cor de fundo */
+    height: 18px; /* altura */
+    outline: none; /* contorno */
+    margin-top: 8px; /* margem */
+}
+
+.button-cta{
+    height: 40px; /* altura */
+    background-color: #3eb72b; /* cor de fundo */
+    border: 0; /* sem borda */
+    border-radius: 4px; /* borda arredondada */
+    cursor: pointer; /* cursor do mouse */
+    margin-top: 40px; /* margem */
+    color: #fff; /* cor da fonte */
+    font-weight: bold; /* negrito */
+    font-size: 18px; /* tamanho da fonte */
+}
+
+.container-password{
+    max-width: 480px; 
+    margin: 14px 0; /* margem */
+    display: flex; /* para ficar um em cima do outro */ 
+    align-items: center; /* alinhar os itens */
+    flex-direction: column; /* para ficar um em cima do outro */
+    cursor: pointer; /* cursor do mouse */
+    color: #fff;
+}
+
+.tittle{ /* subtitulo */
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 8px
+}
+
+.password{ /* texto da senha gerada */
+    height: 60px; /* altura */
+    background-color: rgba(0, 0, 0, 0.40); /* cor de fundo */
+    border-radius: 4px; /* borda arredondada */
+    display: flex; /* para ficar um em cima do outro */
+    justify-content: center; /* alinhar os itens */
+    align-items: center; /* alinhar os itens */
+    color: #fff; /* cor da fonte */
+    border: 1px solid #313131; /* borda */
+    cursor: pointer; /* cursor do mouse */
+    transition: transform 0.5s;
+}
+
+.password:hover{ /* para quando passar o mouse em cima */
+    transform: scale(1.05); /* para aumentar o tamanho */
+}
+
+.tooltip{ /* tooltip */ 
+    color: #fff;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background: rgba(15, 15, 15);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.hide{
+    display: none;
+}
+
+.container-password:hover .tooltip{ /* para quando passar o mouse em cima */
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
